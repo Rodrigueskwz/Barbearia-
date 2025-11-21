@@ -9,7 +9,7 @@ form.addEventListener("submit", async (e) => {
   const horario = document.querySelector("#time").value;
 
   try {
-    const resposta = await fetch("http://localhost:3000/agendamentos", {
+    const resposta = await fetch(" https://barbearia-marvel-d2x5.onrender.com/agendamentos", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

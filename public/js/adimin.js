@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     tbody.innerHTML = "";
     try {
       // Faz uma requisiÃ§Ã£o GET para o backend local
-      const res = await fetch("http://localhost:3000/agendamentos");
+      const res = await fetch(" https://barbearia-marvel-d2x5.onrender.com/agendamentos");
       const agendamentos = await res.json();
 
       // Percorre cada agendamento retornado e cria uma linha na tabela
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         // Busca os dados atuais do agendamento
         try {
-          const res = await fetch(`http://localhost:3000/agendamentos/${id}`);
+          const res = await fetch(`https://barbearia-marvel-d2x5.onrender.com/agendamentos/${id}`);
           const agendamento = await res.json();
 
           // Preenche os campos do modal com os dados atuais
@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     try {
       const res = await fetch(
-        `http://localhost:3000/agendamentos/${currentEditId}`,
+        ` https://barbearia-marvel-d2x5.onrender.com/agendamentos/${currentEditId}`,
         {
           method: "PATCH",
           headers: { "Content-Type": "application/json" },
