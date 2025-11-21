@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin • Barbearia Marvel</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">Barbearia Marvel</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Serviços</a>
+        <a href="booking.html">Agendamento</a>
+        <a href="contact.html">Contato</a>
+        <a href="admin.html" class="active">Admin</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Agendamentos Salvos</h1>
+      <table id="bookingsTable">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Telefone</th>
+            <th>Serviço</th>
+            <th>Data</th>
+            <th>Horário</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Linhas geradas pelo JS -->
+        </tbody>
+      </table>
+
+      <!-- Modal de Edição -->
+      <div id="editModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Editar Agendamento</h2>
+          <form id="editForm">
+            <label for="editNome">Nome:</label>
+            <input type="text" id="editNome" required />
+
+            <label for="editTelefone">Telefone:</label>
+            <input type="text" id="editTelefone" required />
+
+            <label for="editServico">Serviço:</label>
+            <input type="text" id="editServico" required />
+
+            <label for="editData">Data:</label>
+            <input type="date" id="editData" required />
+
+            <label for="editHorario">Horário:</label>
+            <input type="time" id="editHorario" required />
+
+            <button type="submit">Salvar</button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer>© 2025 Barbearia Marvel — Todos os direitos reservados.</footer>
+
+    <script src="/public/js/adimin.js" defer></script>
+  </body>
+</html>
